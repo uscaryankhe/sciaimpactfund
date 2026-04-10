@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — SCIA Impact Fund</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['"Inter"', '"Helvetica Neue"', 'Arial', 'sans-serif'], serif: ['"Cormorant Garamond"', 'Georgia', 'serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+  <div class="cursor-dot" id="cdot"></div>
+  <div class="cursor-ring" id="cring"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-mark"></div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-main">SCIA</span>
+        <span class="nav-brand-sub">Impact Fund</span>
+      </div>
+    </a>
+    <div class="nav-links hidden md:flex">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="strategy.html" class="nav-link">Strategy</a>
+      <a href="team.html"     class="nav-link">Team</a>
+      <a href="careers.html"  class="nav-link active">Get Involved</a>
+    </div>
+    <button id="hamburger" class="md:hidden p-2 flex flex-col gap-[5px]" aria-label="Menu">
+      <span id="b1" class="block w-5 h-px bg-white opacity-40 transition-all duration-300"></span>
+      <span id="b2" class="block w-5 h-px bg-white opacity-40 transition-all duration-300"></span>
+      <span id="b3" class="block w-3 h-px bg-white opacity-40 transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <a href="index.html"    class="nav-link" onclick="closeMobile()">Home</a>
+    <a href="strategy.html" class="nav-link" onclick="closeMobile()">Strategy</a>
+    <a href="team.html"     class="nav-link" onclick="closeMobile()">Team</a>
+    <a href="careers.html"  class="nav-link" onclick="closeMobile()">Get Involved</a>
+  </div>
+
+  <!-- ════ PAGE HERO ════ -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="overline reveal">Open Roles</span>
+      <div class="rule-sm line-draw reveal d1" style="margin-bottom:36px;"></div>
+      <h1 class="display-xl reveal d2">
+        The Work Is<br/><em>Substantive.</em>
+      </h1>
+      <p class="body-lg reveal d3" style="max-width:580px; margin-top:28px;">
+        Open to current SCIA members seeking hands-on experience in a professional investment environment. Every role operates at institutional velocity: live deal flow, real capital decisions, and direct exposure to the Fund's generational compounding mandate.
+      </p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════ OPEN ROLES ════ -->
+  <section id="roles">
+    <div class="container">
+
+      <!-- ── INVESTMENT TEAM ── -->
+      <div class="roles-category reveal">
+        <div class="roles-category-header">
+          <span class="roles-category-label">Investment Team</span>
+          <div class="roles-category-line"></div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Equity Research Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Investment</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Conduct rigorous due diligence on high-potential Indian startups, produce professional EQR memos, and surface asymmetric opportunities by ignoring market noise. Interface directly with founders and sector experts to develop informational edge unavailable through conventional research. Contributions are tracked and inform carry allocation on successful deployments.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Equity Research &amp; Deal Diligence</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">8&ndash;10 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">Investment Lead, e-Board</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Equity Research Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Portfolio Strategy Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Investment</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Drive portfolio construction and ongoing position monitoring across the Fund's active investment book. Build thesis frameworks, scenario analysis, and performance attribution models. Own the feedback loop between deal selection and the Fund's long-horizon compounding metrics &mdash; the most important return we track.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Portfolio Construction &amp; Monitoring</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">8&ndash;10 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">Investment Lead, e-Board</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Portfolio Strategy Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Alternative Investments Analyst</div>
+              <div class="role-type-tag">Full-Year &middot; Investment</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Identify non-traditional, high-asymmetry opportunities across private credit, secondaries, and co-investment structures within the South Asian ecosystem. Develop proprietary screening frameworks and surface opportunities that conventional VC mandates systematically miss. Build the alternative allocation layer of the Fund's dual mandate architecture.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Alt. Investments &amp; Structuring</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">6&ndash;8 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">Investment Lead, e-Board</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Alternative Investments Analyst" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── IMPACT & PHILANTHROPY ── -->
+      <div class="roles-category reveal d1">
+        <div class="roles-category-header">
+          <span class="roles-category-label">Impact &amp; Philanthropy</span>
+          <div class="roles-category-line"></div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Impact &amp; Philanthropy Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Philanthropic</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Lead grant evaluation and impact measurement for the Fund's philanthropic mandate. Build rigorous nonprofit diligence frameworks, assess mission alignment, and quantify social ROI across education, healthcare, and economic empowerment initiatives. Present recommendations directly to the e-Board for capital deployment decisions.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Grant Diligence &amp; Impact Measurement</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">6&ndash;8 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">Philanthropy Lead, e-Board</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Impact and Philanthropy Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CAPITAL FORMATION ── -->
+      <div class="roles-category reveal d2">
+        <div class="roles-category-header">
+          <span class="roles-category-label">Capital Formation</span>
+          <div class="roles-category-line"></div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Capital Formation Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Fundraising</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Drive initiatives that expand the Fund's capital base across alumni networks, South Asian institutional partners, and aligned co-investors. Own the full relationship cycle from prospecting through close. Produce LP-quality materials and build the pipeline that finances the next decade of deployments.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Fundraising &amp; Investor Relations</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">6&ndash;8 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">e-Board President</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Capital Formation Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── OPERATIONS & PLATFORM ── -->
+      <div class="roles-category reveal d3">
+        <div class="roles-category-header">
+          <span class="roles-category-label">Operations &amp; Platform</span>
+          <div class="roles-category-line"></div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Talent &amp; Operations Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Platform</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Architect the internal operating infrastructure that enables the Fund to execute at institutional velocity. Own recruiting pipelines, onboarding systems, and process documentation. The person in this role ensures that the mission compounds across e-board generations &mdash; not just in the portfolio, but in the organization itself.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">Recruiting, Ops &amp; Continuity</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">5&ndash;7 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">e-Board President</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Talent and Operations Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Communications Associate</div>
+              <div class="role-type-tag">Full-Year &middot; Platform</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">Control the Fund's external narrative with the precision of a top-tier IR function. Produce LP-quality materials, manage digital presence, and ensure the brand communicates quiet institutional power at every touchpoint. The person in this role owns how SCIA Impact Fund is perceived by founders, investors, and the South Asian ecosystem.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Function</span><span class="role-meta-value">IR, Brand &amp; External Affairs</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">5&ndash;7 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Reports To</span><span class="role-meta-value">e-Board President</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Communications Associate" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── INTERNSHIP PROGRAM ── -->
+      <div class="roles-category reveal d4">
+        <div class="roles-category-header">
+          <span class="roles-category-label">Internship Program</span>
+          <div class="roles-category-line"></div>
+        </div>
+
+        <div class="intern-banner" style="margin-bottom:2px;">
+          <div class="intern-dot"></div>
+          <span class="intern-banner-text">Semester-length structured program &middot; Open to all years &middot; No prior finance experience required</span>
+        </div>
+
+        <div class="role-row" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Investment Analyst Intern</div>
+              <div class="role-type-tag">Semester &middot; Internship</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">A structured, semester-long rotation embedding you directly in live deal flow, EQR memo production, and portfolio monitoring. Work alongside Associates on active opportunities from sourcing through close. The fastest on-ramp to the Fund's full-year Associate track.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Duration</span><span class="role-meta-value">One semester</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">4&ndash;6 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Path</span><span class="role-meta-value">Direct pipeline to Associate roles</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Investment Analyst Intern" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="role-row" style="border-bottom:1px solid rgba(255,255,255,0.055);" onclick="toggleRole(this)">
+          <div class="role-row-top">
+            <div class="role-row-left">
+              <div class="role-title">Impact Analyst Intern</div>
+              <div class="role-type-tag">Semester &middot; Internship</div>
+            </div>
+            <div class="role-row-right">
+              <span class="role-status">Open</span>
+              <div class="role-toggle"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="5" y1="1" x2="5" y2="9" stroke="rgba(255,255,255,0.5)" stroke-width="1"/><line x1="1" y1="5" x2="9" y2="5" stroke="rgba(255,255,255,0.5)" stroke-width="1"/></svg></div>
+            </div>
+          </div>
+          <div class="role-body">
+            <div class="role-body-inner">
+              <p class="role-description">A focused rotation through the Fund's philanthropic evaluation process. Conduct nonprofit diligence, build impact measurement frameworks, and present grant recommendations directly to the e-Board. Develop the analytical toolkit to assess social ROI with the same rigor applied to equity investments.</p>
+              <div class="role-meta">
+                <div class="role-meta-item"><span class="role-meta-label">Duration</span><span class="role-meta-value">One semester</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Commitment</span><span class="role-meta-value">4&ndash;6 hrs / week</span></div>
+                <div class="role-meta-item"><span class="role-meta-label">Path</span><span class="role-meta-value">Direct pipeline to Associate roles</span></div>
+                <a href="mailto:sciaimpactfund@gmail.com?subject=Impact Analyst Intern" class="role-apply-link">Apply &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════ RECRUITMENT ════ -->
+  <section id="recruitment" style="padding: 100px 0 80px;">
+    <div class="container">
+
+      <div class="section-grid reveal" style="margin-bottom:0;">
+        <div>
+          <span class="overline" style="margin-bottom:16px;">Recruitment</span>
+          <div class="rule-sm"></div>
+        </div>
+        <div>
+          <h2 class="display-lg" style="margin-bottom:20px;">
+            Summer 2026<br/><em>Cycle.</em>
+          </h2>
+          <p class="body-lg" style="max-width:560px;">
+            We recruit a small cohort of SCIA members who demonstrate genuine edge in capital deployment, rigorous analysis, and long-term thinking.
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="rec-timeline">
+          <div class="rec-step">
+            <div class="rec-node"></div>
+            <div class="rec-step-text">
+              <div class="rec-step-date">March 2026</div>
+              <div class="rec-step-title">Applications Open</div>
+            </div>
+          </div>
+          <div class="rec-step">
+            <div class="rec-node"></div>
+            <div class="rec-step-text">
+              <div class="rec-step-date">April 15, 2026</div>
+              <div class="rec-step-title">Priority Deadline</div>
+            </div>
+          </div>
+          <div class="rec-step">
+            <div class="rec-node"></div>
+            <div class="rec-step-text">
+              <div class="rec-step-date">April &ndash; May 2026</div>
+              <div class="rec-step-title">Interviews Conducted</div>
+            </div>
+          </div>
+          <div class="rec-step">
+            <div class="rec-node"></div>
+            <div class="rec-step-text">
+              <div class="rec-step-date">Rolling thru June 2026</div>
+              <div class="rec-step-title">Decisions &amp; Offers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal d2" style="margin-bottom:0;">
+        <span class="overline" style="margin-bottom:0;">Process</span>
+        <p class="body-md" style="margin-top:10px; max-width:520px;">Our selection consists of two focused interviews.</p>
+      </div>
+
+      <div class="reveal d3" style="margin-top:24px;">
+        <div class="rec-interview">
+          <div class="rec-int-num">Round 01</div>
+          <div class="rec-int-title">Behavioral Interview</div>
+          <p class="rec-int-body">We explore clarity of thought, intellectual curiosity, and alignment with disciplined, multi-generational capital allocation. No finance background required for this round.</p>
+        </div>
+        <div class="rec-interview">
+          <div class="rec-int-num">Round 02</div>
+          <div class="rec-int-title">Technical &amp; Case Round</div>
+          <p class="rec-int-body">Includes investment analysis, brain teasers, real-world deal scenarios, and EQR-style exercises designed to surface analytical edge and the ability to ignore market noise.</p>
+        </div>
+      </div>
+
+      <div class="rec-inclusion reveal d4">
+        <div class="rec-inclusion-label">Our Commitment</div>
+        <p class="rec-inclusion-text">Our process is intentionally straightforward and merit-based. We welcome candidates of all backgrounds and cognitive styles. Neurodivergent applicants or those who process information differently are strongly encouraged to apply. We are happy to adapt the format if a non-traditional approach better allows you to demonstrate your capabilities.</p>
+      </div>
+
+      <div class="rec-carry reveal d5">
+        <p class="rec-carry-text">All roles at the Associate or Analyst level are open to current SCIA members. Exceptional candidates may receive meaningful downstream carry participation and hands-on exposure to the Fund's proprietary AI CFO platform.</p>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="reveal" style="margin-top:80px; text-align:center; border-top:1px solid rgba(255,255,255,0.06); padding-top:64px;">
+        <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.5rem,3vw,2.2rem); font-weight:400; color:rgba(255,255,255,0.72); letter-spacing:-0.01em; margin-bottom:10px;">
+          Interested in joining the team?
+        </p>
+        <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:0.98rem; font-weight:300; color:rgba(255,255,255,0.3); line-height:1.8; margin-bottom:40px; max-width:440px; margin-left:auto; margin-right:auto;">
+          Reach out directly. We review applications on a rolling basis and prioritize candidates who demonstrate genuine conviction.
+        </p>
+        <a href="mailto:sciaimpactfund@gmail.com" class="btn-primary">Email Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap; margin-bottom:48px;">
+        <div>
+          <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.25rem; font-weight:400; letter-spacing:0.18em; color:#fff; margin-bottom:6px;">SCIA IMPACT FUND</div>
+          <div style="font-size:0.55rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--dim);">Southern California Indo-Americans &middot; USC</div>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/scia-impact-fund" class="footer-social-link" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Follow our work
+            </a>
+          </div>
+        </div>
+        <div style="display:flex; gap:32px; flex-wrap:wrap; align-items:center;">
+          <a href="index.html"    class="nav-link">Home</a>
+          <a href="strategy.html" class="nav-link">Strategy</a>
+          <a href="team.html"     class="nav-link">Team</a>
+          <a href="careers.html"  class="nav-link">Get Involved</a>
+        </div>
+      </div>
+      <div style="height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent); margin-bottom:28px;"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+        <p style="font-size:0.62rem; color:rgba(255,255,255,0.18); letter-spacing:0.06em;">&copy; 2026 SCIA Impact Fund. An arm of Southern California Indo-Americans at USC.</p>
+        <p style="font-size:0.52rem; color:rgba(255,255,255,0.1); letter-spacing:0.05em;">Not a registered investment advisor. For informational purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
