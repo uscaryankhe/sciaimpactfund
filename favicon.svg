@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <circle cx="200" cy="200" r="200" fill="#000"/>
+  <circle cx="200" cy="200" r="92" fill="white"/>
+  <text x="200" y="197" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-weight="400" letter-spacing="7" fill="black">SCIA</text>
+  <text x="200" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.5" font-weight="600" letter-spacing="5.5" fill="black">IMPACT FUND</text>
+</svg>
